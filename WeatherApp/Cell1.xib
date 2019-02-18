@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="183" id="PQG-Dm-dra" customClass="Cell1" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PQG-Dm-dra" id="dVC-vp-6za">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN3-PC-6VR">
+                        <rect key="frame" x="16" y="31" width="343" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="I07-nP-cSg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfE-Qd-IS8">
+                        <rect key="frame" x="176.5" y="62" width="23" height="90"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O2-0o-K97">
+                        <rect key="frame" x="209.5" y="62" width="16" height="60"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="≡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIt-ox-lZG">
+                        <rect key="frame" x="344" y="30" width="24" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2O2-0o-K97" firstAttribute="leading" secondItem="PfE-Qd-IS8" secondAttribute="trailing" constant="10" id="4jY-wn-Rey"/>
+                    <constraint firstItem="XIt-ox-lZG" firstAttribute="top" secondItem="dVC-vp-6za" secondAttribute="top" constant="30" id="E4P-55-OBy"/>
+                    <constraint firstItem="2O2-0o-K97" firstAttribute="top" secondItem="PfE-Qd-IS8" secondAttribute="top" id="Q8e-tY-FU7"/>
+                    <constraint firstItem="PfE-Qd-IS8" firstAttribute="centerX" secondItem="dVC-vp-6za" secondAttribute="centerX" id="acO-DB-Xsl"/>
+                    <constraint firstItem="lN3-PC-6VR" firstAttribute="trailing" secondItem="dVC-vp-6za" secondAttribute="trailingMargin" id="bMe-5E-Syr"/>
+                    <constraint firstAttribute="trailing" secondItem="XIt-ox-lZG" secondAttribute="trailing" constant="7" id="i8J-zC-dha"/>
+                    <constraint firstItem="PfE-Qd-IS8" firstAttribute="top" secondItem="lN3-PC-6VR" secondAttribute="bottom" constant="10" id="oOd-gJ-GwW"/>
+                    <constraint firstItem="lN3-PC-6VR" firstAttribute="top" secondItem="dVC-vp-6za" secondAttribute="topMargin" constant="20" id="t0D-BJ-1Jt"/>
+                    <constraint firstItem="lN3-PC-6VR" firstAttribute="leading" secondItem="dVC-vp-6za" secondAttribute="leadingMargin" id="vSN-T4-9GU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="nameCityLabel" destination="lN3-PC-6VR" id="WmG-uP-zzx"/>
+                <outlet property="tempLabel" destination="PfE-Qd-IS8" id="uHA-40-Svg"/>
+                <outlet property="znakLabel" destination="2O2-0o-K97" id="v4h-t3-IIt"/>
+            </connections>
+            <point key="canvasLocation" x="172.5" y="-105"/>
+        </tableViewCell>
+    </objects>
+</document>
